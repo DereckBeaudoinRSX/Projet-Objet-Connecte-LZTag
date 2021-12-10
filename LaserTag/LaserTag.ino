@@ -1,26 +1,18 @@
 const int buzzerPin = 12;
 const int buttonPin = 15;
-const int laserPin = 5;
-const int dataPin = 4;
-const int latchPin = 0;
-const int clockPin = 2;
+const int laserPin = 16;
 
 void setup() {
   // put your setup code here, to run once: 
   pinMode(buzzerPin, OUTPUT);
   pinMode(buttonPin, INPUT);
   pinMode(laserPin, OUTPUT);
-  pinMode(dataPin, OUTPUT);
-  pinMode(latchPin, OUTPUT);
-  pinMode(clockPin, OUTPUT);
   
   Serial.begin(9600);
 }
 
 void Fire(){
-    digitalWrite(laserPin, HIGH);
     buzzer();
-    digitalWrite(laserPin, LOW);
     delay(50);
 }
 
